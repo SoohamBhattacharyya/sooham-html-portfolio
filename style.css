@@ -64,6 +64,42 @@ a:hover {
   text-decoration: none;
 }
 
+/* Contact form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
 footer {
   margin-top: 40px;
   font-size: 14px;
@@ -71,21 +107,22 @@ footer {
   text-align: center;
 }
 
-/* 🌙 Dark Mode Styles */
-.dark-mode {
-  background: #121212;
-  color: #e0e0e0;
-}
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
 
-.dark-mode .container {
-  background: #1e1e1e;
-  box-shadow: 0 0 15px rgba(255,255,255,0.05);
-}
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
 
-.dark-mode a {
-  color: #90caf9;
-}
+  h1 {
+    font-size: 24px;
+  }
 
-.dark-mode .button {
-  background-color: #555;
+  .subtitle {
+    font-size: 14px;
+  }
 }
