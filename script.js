@@ -24,13 +24,22 @@ if (resumeBtn) {
   });
 }
 
-// ✅ 4. Dark mode toggle
+// ✅ 4. Dark mode toggle with memory
 const toggle = document.getElementById("darkToggle");
 if (toggle) {
   toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
   });
 }
+
+// ✅ 4b. Load dark mode from memory
+window.addEventListener("DOMContentLoaded", () => {
+  const savedMode = localStorage.getItem("darkMode");
+  if (savedMode === "true") {
+    document.body.classList.add("dark-mode");
+  }
+});
 
 // ✅ 5. Scroll-to-top button
 const scrollBtn = document.getElementById("scrollTopBtn");
@@ -41,8 +50,36 @@ window.onscroll = function () {
   } else {
     scrollBtn.style.display = "none";
   }
+  updateScrollProgress();
 };
 
 scrollBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// ✅ 6. Scroll progress bar logic
+function updateScrollProgress() {
+  const progress = document.getElementById("scrollProgress");
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (scrollTop / scrollHeight) * 100;
+  if (progress) {
+    progress.style.width = scrolled + "%";
+  }
+}
+
+// ✅ 7. Animate sections on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-up-visible");
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+document.querySelectorAll("section").forEach(sec => {
+  sec.classList.add("fade-up");
+  observer.observe(sec);
 });

@@ -30,6 +30,9 @@
 </head>
 <body>
 
+  <!-- ✅ Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
   <!-- ✅ Preloader -->
   <div id="preloader">
     <div class="loader"></div>
@@ -48,6 +51,7 @@
     <img src="SoohamBlazer.jpg" alt="Sooham Bhattacharyya" class="profile-pic" />
     <p class="subtitle">B.Tech CSE Student | ML Developer | Web Enthusiast</p>
 
+    <!-- 🧠 About -->
     <section id="about">
       <h2>About Me</h2>
       <p>
@@ -55,20 +59,16 @@
       </p>
     </section>
 
+    <!-- 🛠️ Skills -->
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills">
-        <span>Python</span>
-        <span>C</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>React</span>
-        <span>TensorFlow</span>
-        <span>Kaggle</span>
+        <span>Python</span><span>C</span><span>HTML</span><span>CSS</span>
+        <span>JavaScript</span><span>React</span><span>TensorFlow</span><span>Kaggle</span>
       </div>
     </section>
 
+    <!-- 💼 Projects -->
     <section id="projects">
       <h2>Projects</h2>
       <div class="project-card">
@@ -76,23 +76,23 @@
         <p><a href="https://soohambhattacharyya.github.io/plant-disease-site/" target="_blank">Live Demo</a> | 
         <a href="https://www.kaggle.com/code/soohambhattacharyya/plant-leaf-disease-detection-cnn" target="_blank">Kaggle</a></p>
       </div>
-
       <div class="project-card">
         <h3>🫁 Pneumonia Detection</h3>
         <p><a href="https://www.kaggle.com/code/soohambhattacharyya/sooham-pneumonia" target="_blank">Kaggle Notebook</a></p>
       </div>
-
       <div class="project-card">
         <h3>🛍 Eklavya Electronics</h3>
         <p><a href="https://github.com/SoohamBhattacharyya/Eklavya-Electronics---MERN" target="_blank">GitHub Repo</a></p>
       </div>
     </section>
 
+    <!-- 📄 Resume -->
     <section id="resume">
       <h2>Resume</h2>
       <a href="MYRESUME_25.pdf" download class="button">📄 Download Resume</a>
     </section>
 
+    <!-- 📬 Contact -->
     <section id="contact">
       <h2>Contact Me</h2>
       <form action="https://formspree.io/f/manjaeew" method="POST">
@@ -103,34 +103,34 @@
       </form>
     </section>
 
-    <!-- 💼 Hire Me for a Project -->
+    <!-- 💼 Hire Me -->
     <section id="hire">
       <h2>Hire Me for Your Project</h2>
-        <form action="https://formspree.io/f/xdkzypoo" method="POST">
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="email" name="_replyto" placeholder="Your email" required />
-          <input type="text" name="projectType" placeholder="Project type (e.g. Website, AI App)" required />
-          <input type="text" name="budget" placeholder="Estimated budget (₹ or $)" />
-          <input type="text" name="deadline" placeholder="Deadline (e.g. 15 July)" />
-          <textarea name="message" placeholder="Describe your project..." required></textarea>
-          <button type="submit">Send Project Request</button>
-        </form>
+      <form action="https://formspree.io/f/xdkzypoo" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="_replyto" placeholder="Your email" required />
+        <input type="text" name="projectType" placeholder="Project type (e.g. Website, AI App)" required />
+        <input type="text" name="budget" placeholder="Estimated budget (₹ or $)" />
+        <input type="text" name="deadline" placeholder="Deadline (e.g. 15 July)" />
+        <textarea name="message" placeholder="Describe your project..." required></textarea>
+        <button type="submit">Send Project Request</button>
+      </form>
     </section>
 
-    <!-- 🎓 Request Tutoring -->
+    <!-- 🎓 Teaching Request -->
     <section id="teach">
       <h2>Need 1:1 Teaching Help?</h2>
-        <form action="https://formspree.io/f/mqabwgke" method="POST">
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="email" name="_replyto" placeholder="Your email" required />
-          <input type="text" name="subject" placeholder="Subject or topic (e.g. Python, C, HTML)" required />
-          <input type="text" name="preferredTime" placeholder="Preferred time (e.g. 6 PM - 8 PM)" />
-          <textarea name="message" placeholder="What do you want to learn or ask?" required></textarea>
-          <button type="submit">Request a Class</button>
-        </form>
+      <form action="https://formspree.io/f/mqabwgke" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="_replyto" placeholder="Your email" required />
+        <input type="text" name="subject" placeholder="Subject or topic (e.g. Python, C, HTML)" required />
+        <input type="text" name="preferredTime" placeholder="Preferred time (e.g. 6 PM - 8 PM)" />
+        <textarea name="message" placeholder="What do you want to learn or ask?" required></textarea>
+        <button type="submit">Request a Class</button>
+      </form>
     </section>
 
-
+    <!-- 🔗 Links -->
     <section id="links">
       <h2>Links</h2>
       <p>Email: <a href="mailto:sunnysooham05@gmail.com">sunnysooham05@gmail.com</a></p>
@@ -143,24 +143,21 @@
     <p id="footer-text" style="text-align:center; margin-top:40px;"></p>
   </footer>
 
+  <!-- ✅ Scripts -->
   <script src="script.js"></script>
 
-    <script src="script.js"></script>
-
   <!-- ✅ Tawk.to Group Chat -->
-  <!--Start of Tawk.to Script-->
   <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
   (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/685fae6e00ff9419109c4d5c/1iuqs2ooi';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/685fae6e00ff9419109c4d5c/1iuqs2ooi';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
   })();
   </script>
-  <!--End of Tawk.to Script-->
 
 </body>
 </html>
