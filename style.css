@@ -260,19 +260,78 @@ footer {
   }
 }
 
-/* 💼 Hire / 🎓 Teaching forms layout */
+/* 🧑‍💼 Hire Me & 🎓 Teaching sections */
 section#hire,
 section#teach {
-  background-color: #fdfdfd;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  margin-top: 30px;
+  background: #f9fbff;
+  padding: 30px;
+  margin-top: 50px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease-in-out;
+}
+
+section#hire:hover,
+section#teach:hover {
+  transform: translateY(-3px);
+}
+
+section#hire h2::before {
+  content: "🧑‍💼 ";
+}
+
+section#teach h2::before {
+  content: "🎓 ";
 }
 
 section#hire h2,
 section#teach h2 {
-  color: #007BFF;
+  color: #0056b3;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+/* 💼 Form styling shared */
+section#hire form,
+section#teach form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+section#hire form textarea,
+section#teach form textarea {
+  grid-column: span 2;
+}
+
+section#hire form button,
+section#teach form button {
+  grid-column: span 2;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+section#hire form button:hover,
+section#teach form button:hover {
+  background: linear-gradient(to right, #0056b3, #0041a8);
+}
+
+/* 📱 Responsive for mobile */
+@media screen and (max-width: 600px) {
+  section#hire form,
+  section#teach form {
+    grid-template-columns: 1fr;
+  }
+
+  section#hire form button,
+  section#teach form button {
+    grid-column: span 1;
+  }
 }
