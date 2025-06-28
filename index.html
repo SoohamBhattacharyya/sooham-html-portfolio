@@ -5,64 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sooham Bhattacharyya – Portfolio</title>
 
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <!-- ✅ SEO Meta Tags -->
   <meta name="description" content="Portfolio of Sooham Bhattacharyya – AI/ML Developer, Web Developer, Final Year B.Tech CSE Student. Explore projects, resume, and contact details." />
-  <meta name="keywords" content="Sooham Bhattacharyya, portfolio, AI developer, ML projects, web developer, B.Tech CSE, India, Next.js, HTML, resume, contact" />
+  <meta name="keywords" content="Sooham Bhattacharyya, portfolio, AI developer, ML projects, web developer, B.Tech CSE, India, resume, contact" />
   <meta name="author" content="Sooham Bhattacharyya" />
 
-  <!-- ✅ Open Graph Tags -->
+  <!-- ✅ Open Graph -->
   <meta property="og:title" content="Sooham Bhattacharyya – Portfolio" />
   <meta property="og:description" content="Projects, Resume, and Contact of Sooham Bhattacharyya – Developer and Researcher." />
   <meta property="og:image" content="SoohamBlazer.jpg" />
   <meta property="og:url" content="https://sooham-html-portfolio.vercel.app/" />
   <meta property="og:type" content="website" />
 
-  <!-- ✅ Twitter Card Tags -->
+  <!-- ✅ Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sooham Bhattacharyya – Portfolio" />
-  <meta name="twitter:description" content="Explore projects, download resume, and contact Sooham – an AI and Web Developer." />
-  <meta name="twitter:image" content="SoohamBlazer.jpg" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <img src="SoohamBlazer.jpg" alt="Sooham Bhattacharyya" class="profile-pic" />
+
+  <!-- ✅ Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- ✅ Scroll-to-top button -->
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
+  <!-- ✅ Sticky Header -->
+  <header>
     <h1>Sooham Bhattacharyya</h1>
+    <button id="darkToggle">🌙</button>
+  </header>
+
+  <div class="container fade-in">
+    <img src="SoohamBlazer.jpg" alt="Sooham Bhattacharyya" class="profile-pic" />
     <p class="subtitle">B.Tech CSE Student | ML Developer | Web Enthusiast</p>
 
-    <section>
+    <section id="about">
       <h2>About Me</h2>
       <p>
-        I'm a passionate developer from Bishnupur, currently pursuing B.Tech in Computer Science with a CGPA of 9.1. I build AI-based solutions, full-stack websites, and contribute to research papers. My key skills include Python, C, HTML, CSS, JavaScript, and React.js.
+        I'm a passionate developer from Bishnupur, currently pursuing B.Tech in Computer Science with a CGPA of 9.03. I build AI-based solutions, full-stack websites, and contribute to research papers.
       </p>
     </section>
 
-    <section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>Python</span>
+        <span>C</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>TensorFlow</span>
+        <span>Kaggle</span>
+      </div>
+    </section>
+
+    <section id="projects">
       <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>🌿 Plant Leaf Disease Detector</strong><br/>
-          <a href="https://soohambhattacharyya.github.io/plant-disease-site/" target="_blank">Live Demo</a> |
-          <a href="https://www.kaggle.com/code/soohambhattacharyya/plant-leaf-disease-detection-cnn" target="_blank">Kaggle</a>
-        </li>
-        <li>
-          <strong>🫁 Pneumonia Detection</strong><br/>
-          <a href="https://www.kaggle.com/code/soohambhattacharyya/sooham-pneumonia" target="_blank">Kaggle Notebook</a>
-        </li>
-        <li>
-          <strong>🛍 Eklavya Electronics (E-Commerce)</strong><br/>
-          <a href="https://github.com/SoohamBhattacharyya/Eklavya-Electronics---MERN" target="_blank">GitHub Repo</a>
-        </li>
-      </ul>
+      <div class="project-card">
+        <h3>🌿 Plant Leaf Disease Detector</h3>
+        <p><a href="https://soohambhattacharyya.github.io/plant-disease-site/" target="_blank">Live Demo</a> | 
+        <a href="https://www.kaggle.com/code/soohambhattacharyya/plant-leaf-disease-detection-cnn" target="_blank">Kaggle</a></p>
+      </div>
+
+      <div class="project-card">
+        <h3>🫁 Pneumonia Detection</h3>
+        <p><a href="https://www.kaggle.com/code/soohambhattacharyya/sooham-pneumonia" target="_blank">Kaggle Notebook</a></p>
+      </div>
+
+      <div class="project-card">
+        <h3>🛍 Eklavya Electronics</h3>
+        <p><a href="https://github.com/SoohamBhattacharyya/Eklavya-Electronics---MERN" target="_blank">GitHub Repo</a></p>
+      </div>
     </section>
 
-    <section>
+    <section id="resume">
       <h2>Resume</h2>
-      <a href="MYRESUME_25.pdf" download class="button">Download Resume</a>
+      <a href="MYRESUME_25.pdf" download class="button">📄 Download Resume</a>
     </section>
 
-    <section>
+    <section id="contact">
       <h2>Contact Me</h2>
       <form action="https://formspree.io/f/manjaeew" method="POST">
         <input type="text" name="name" placeholder="Your name" required />
@@ -72,7 +103,7 @@
       </form>
     </section>
 
-    <section>
+    <section id="links">
       <h2>Links</h2>
       <p>Email: <a href="mailto:sunnysooham05@gmail.com">sunnysooham05@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/SoohamBhattacharyya" target="_blank">SoohamBhattacharyya</a></p>

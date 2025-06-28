@@ -1,34 +1,48 @@
-// ✅ 1. Show current year in footer
+// ✅ 1. Preloader fade-out on page load
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    preloader.style.opacity = "0";
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 500);
+  }
+});
+
+// ✅ 2. Footer year update
 const footer = document.getElementById("footer-text");
 const year = new Date().getFullYear();
-footer.innerHTML = `© ${year} Sooham Bhattacharyya. All rights reserved.`;
+if (footer) {
+  footer.innerHTML = `© ${year} Sooham Bhattacharyya. All rights reserved.`;
+}
 
-// ✅ 2. Show alert when resume is clicked
-const resumeBtn = document.querySelector('.button');
+// ✅ 3. Resume download confirmation
+const resumeBtn = document.querySelector(".button");
 if (resumeBtn) {
-  resumeBtn.addEventListener('click', () => {
+  resumeBtn.addEventListener("click", () => {
     alert("Thanks for downloading my resume! 📄");
   });
 }
 
-// ✅ 3. Add a dark mode toggle button dynamically
-const toggle = document.createElement('button');
-toggle.innerText = "🌙 Toggle Dark Mode";
-toggle.style.marginTop = "20px";
-toggle.style.padding = "10px 18px";
-toggle.style.borderRadius = "6px";
-toggle.style.border = "none";
-toggle.style.backgroundColor = "#444";
-toggle.style.color = "#fff";
-toggle.style.cursor = "pointer";
-toggle.style.display = "block";
-toggle.style.marginLeft = "auto";
-toggle.style.marginRight = "auto";
+// ✅ 4. Dark mode toggle
+const toggle = document.getElementById("darkToggle");
+if (toggle) {
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+}
 
-// Append the toggle button to container
-document.querySelector('.container').appendChild(toggle);
+// ✅ 5. Scroll-to-top button
+const scrollBtn = document.getElementById("scrollTopBtn");
 
-// Toggle dark mode class on body
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle("dark-mode");
+window.onscroll = function () {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+};
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
